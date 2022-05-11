@@ -28,7 +28,7 @@ namespace StackandQueue
             this.top = node;
             Console.WriteLine("{0} pushed to stack" + value);
         }
-          public void Peek()
+        public void Peek()
         {
             if (this.top == null)
             {
@@ -57,6 +57,66 @@ namespace StackandQueue
                 Pop();
             }
         }
+        public void Display()
+        {
+            Node temp = this.top;
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+            }
+            Console.WriteLine(" ");
+        }
+        public void Enqueue(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+                Console.WriteLine("inserted into Queue" + node.data);
+            }
+            DisplayQueue();
+        }
+        public void DisplayQueue()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Queue is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+            }
+            Console.WriteLine(" ");
+        }
+        internal void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty, Deletion is not possible");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    Console.WriteLine("Value Dequeued is " + this.head.data);
+                    this.head = this.head.next;
+                }
+            }
+
+        }
     }
 }
-

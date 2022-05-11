@@ -26,9 +26,23 @@ class Program
                 case 3:
                     stack.Pop();
                     break;
-
+                case 4:
+                    stack.IsEmpty();
+                    break;
+                case 5:
+                    stack.Enqueue(70);
+                    stack.Enqueue(30);
+                    stack.Enqueue(56);
+                    break;
+                case 6:
+                    stack.Dequeue();
+                    break;
+                case 0:
+                    check = false;
+                    break;
             }
+
+        }
        }
     }
-}
 
