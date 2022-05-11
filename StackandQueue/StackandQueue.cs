@@ -38,6 +38,25 @@ namespace StackandQueue
             Console.WriteLine("{0} is in the top of the stack", this.top.data);
             Display();
         }
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty, Deletion is not possible");
+                return;
+            }
+            Console.WriteLine("Value popped is " + this.top.data);
+            top = top.next;
+            //.Display();
+        }
+        internal void IsEmpty()
+        {
+            while (this.top != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
     }
 }
 

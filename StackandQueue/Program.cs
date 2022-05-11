@@ -23,6 +23,9 @@ class Program
                 case 2:
                     stack.Peek();
                     break;
+                case 3:
+                    stack.Pop();
+                    break;
 
             }
        }
