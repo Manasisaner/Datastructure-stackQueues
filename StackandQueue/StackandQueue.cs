@@ -28,6 +28,16 @@ namespace StackandQueue
             this.top = node;
             Console.WriteLine("{0} pushed to stack" + value);
         }
+          public void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is in the top of the stack", this.top.data);
+            Display();
+        }
     }
 }
 
